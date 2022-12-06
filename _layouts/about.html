@@ -13,8 +13,7 @@
 
         <article>
           {% if page.profile -%}
-          <div class="profile valign">
-            <div class="col-xs-5 col-md-3"><!--float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">-->
+          <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
             {%- if page.profile.image %}
               {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
 
@@ -35,11 +34,9 @@
             </div>
             {%- endif %}
           </div>
-          </div>
           {%- endif %}
 
           <div class="clearfix">
-            <div class="col-xs-7 col-md-7">
             
               <p>
               <font style="font-size: 18px;">I am a PhD student at the Department of Mechanical Engineering, Virginia Tech,
@@ -74,7 +71,6 @@
               <font style="font-size: 18px;"> Besides research, I love travelling, exploring new cultures and meeting new
                   people.<br></font>
               </p> 
-            </div>
           </div>
 
           {% if page.news -%}
