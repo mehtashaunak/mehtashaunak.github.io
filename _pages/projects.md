@@ -1,5 +1,6 @@
 ---
 layout: page
+years: [2022, 2020]
 title: Projects
 permalink: /projects/
 description: A growing collection of your cool projects.
