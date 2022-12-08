@@ -777,10 +777,57 @@ progress {
 
 
 
-// Contact Info
-
 .contact {
   margin-top: 2rem;
+  .item {
+    margin-bottom: 50px;
+    margin-right: 200px;
+  }
+  .icon {
+      background: #12141C;
+      border: 1px solid #2A2A2E;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      border-radius: 50%;
+      font-size: 25px;
+      color: #d0bb79;
+      float: left;
+  }
+  .underline-contact-on-hover:hover{
+    color: #F29105;
+    text-decoration-color: #F29105;
+    text-decoration: underline;
+  }
+  .cont {
+    text-decoration: underline;
+    margin-left: 80px;
+    .link:hover{
+      cursor: pointer;
+      color: #F29105;
+    }
+    h6 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: bolder;
+    }
+    p {
+      display: inline-block;
+      font-size: 14px;
+      border-bottom: 1px solid #2D2D32;
+    }
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    border-bottom: 1px solid #2A2A2E;
+    background: #12141C;
+    font-size: 13px;
+  }
+
   h1 {
     color: var(--global-text-color);
     font-size: 2rem;
@@ -795,120 +842,11 @@ progress {
     }
   }
   h2.year {
-    color: var(--global-divider-color);
-    border-bottom: 1px solid var(--global-divider-color);
+    font-weight:bolder ;
+    border-bottom: 1px dashed var(--global-divider-color);
     padding-bottom: 1rem;
     margin-bottom: 2rem;
     margin-top: 1rem;
     text-align: left;
-  }
-  ol.bibliography {
-    list-style: none;
-    padding: 0;
-    margin-top: 0;
-
-    li {
-      margin-bottom: 1rem;
-      .preview {
-        width: 100%;
-        min-width: 80px;
-        max-width: 300px;
-      }
-      .abbr {
-        height: 2rem;
-        margin-bottom: 0.5rem;
-        abbr {
-          display: inline-block;
-          background-color: var(--global-theme-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          a {
-            color: white;
-            &:hover {
-              text-decoration: none;
-            }
-          }
-        }
-        .award {
-          color: var(--global-theme-color) !important;
-          border: 1px solid var(--global-theme-color);
-        }
-      }
-      .title {
-        font-weight: bolder;
-        font-size: 22px;
-      }
-      .author {
-        a {
-          border-bottom: 1px dashed var(--global-theme-color);
-          &:hover {
-              border-bottom-style: solid;
-              text-decoration: none;
-          }
-        }
-        > em {
-          // border-bottom: 1px solid;
-          font-weight: 500;
-        }
-        > span.more-authors {
-          color: var(--global-text-color-light);
-          border-bottom: 1px dashed var(--global-text-color-light);
-          cursor: pointer;
-          &:hover {
-              color: var(--global-text-color);
-              border-bottom: 1px dashed var(--global-text-color);
-          }
-        }
-      }
-      .links {
-        a.btn {
-          color: var(--global-text-color);
-          border: 1px solid var(--global-text-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 0.25rem;
-          padding-bottom: 0.25rem;
-          &:hover {
-            color: var(--global-theme-color);
-            border-color: var(--global-theme-color);
-          }
-        }
-      }
-      .hidden {
-        font-size: 0.875rem;
-        max-height: 0px;
-        overflow: hidden;
-        text-align: justify;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
-        transition: all 0.15s ease;
-
-        p {
-          line-height: 1.4em;
-          margin: 10px;
-        }
-        pre {
-          font-size: 1em;
-          line-height: 1.4em;
-          padding: 10px;
-        }
-      }
-      .hidden.open {
-        max-height: 100em;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
-        transition: all 0.15s ease;
-      }
-      div.abstract.hidden {
-        border: dashed 1px var(--global-bg-color);
-      }
-      div.abstract.hidden.open {
-        border-color: var(--global-text-color);
-      }
-    }
   }
 }

@@ -6,5 +6,6 @@ description:
 nav: true
 nav_order: 4
 ---
-
-{{contact}}
+<div class="contact">
+    {% include contact.html %}
+</div>
