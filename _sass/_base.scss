@@ -199,6 +199,11 @@ blockquote {
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
+  a{
+    font-size: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 }
 .navbar .dropdown-menu {
   background-color: var(--global-bg-color);
