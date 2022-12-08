@@ -1,3 +1,6 @@
+            {%- if site.resume -%}
+            <a href="assets/Resume/{{site.resume}}" class="butn butn-bg mt-20" style="margin: 100px;"><span style="vertical-align: middle;">Resume</span></a>
+            {% endif %}
             {%- if site.email -%}
             <a href="{{site.email}}" title="email"><i style="margin: 10px;" class="fas fa-envelope"></i></a>
             {% endif %}

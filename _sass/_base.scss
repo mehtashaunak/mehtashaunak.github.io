@@ -8,11 +8,48 @@ p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
   color: var(--global-text-color);
 }
 
+.butn {
+  // color: whitesmoke;
+  padding: 0px 35px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 3;
+  border: 1px solid transparent;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  cursor: pointer;
+  outline: none !important;
+  overflow: hidden;
+}
+.butn:after {
+  padding: 15px 35px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 3;
+  border: 1px solid transparent;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  // background: #ffa500;
+}
+.butn:hover:after {
+  height: 100%;
+}
+.butn span {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 2px;
+  // color: #ffa500;
+  text-transform: uppercase;
+  // position: relative;
+  z-index: 2;
+}
 .butn-bg {
-  background: #ffa500;
+  text-align: center;
+  // color: whitesmoke;
+  background: #F29105 ;
 }
 .butn-bg:hover:after{
-  background: #e27d02;
+  background: #F29105 ;
 }
 .butn-bg:hover span {
   color: rgb(3, 3, 3);
@@ -114,7 +151,7 @@ blockquote {
 
 .profile {
   // margin-top: 50px;
-  width: 110%;
+  width: 120%;
 
   .address {
     margin-bottom: 5px;
