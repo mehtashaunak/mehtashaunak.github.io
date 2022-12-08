@@ -46,13 +46,13 @@ p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
 .butn-bg {
   text-align: center;
   // color: whitesmoke;
-  background: #F29105 ;
+  background: var(--global-theme-color) ;
 }
 .butn-bg:hover:after{
-  background: #F29105 ;
+  background: var(--global-theme-color) ;
 }
 .butn-bg:hover span {
-  color: rgb(3, 3, 3);
+  color: var(--global-footer-text-color);
   text-decoration: underline;
 }
 
@@ -789,7 +789,7 @@ progress {
     margin-right: 200px;
   }
   .icon {
-      background: #12141C;
+      background: var(--global-bg-color);
       border: 1px solid #2A2A2E;
       width: 60px;
       height: 60px;
@@ -801,8 +801,8 @@ progress {
       float: left;
   }
   .underline-contact-on-hover:hover{
-    color: #F29105;
-    text-decoration-color: #F29105;
+    color: var(--global-theme-color);
+    text-decoration-color: var(--global-theme-color);
     text-decoration: underline;
   }
   .cont {
@@ -810,7 +810,7 @@ progress {
     margin-left: 80px;
     .link:hover{
       cursor: pointer;
-      color: #F29105;
+      color: var(--global-theme-color);
     }
     h6 {
       font-size: 18px;
