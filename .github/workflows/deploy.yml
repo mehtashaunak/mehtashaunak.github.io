@@ -62,12 +62,8 @@ permissions:
 
 jobs:
   deploy:
-<<<<<<< HEAD
-    runs-on: ubuntu-22.04
-=======
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
->>>>>>> 0af4aecf50426fc1e35696ca4c47940737175b26
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
