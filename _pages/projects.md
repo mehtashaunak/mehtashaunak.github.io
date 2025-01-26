@@ -5,11 +5,7 @@ title:
 permalink: /projects/
 description: A growing collection of your cool projects.
 nav: true
-<<<<<<< HEAD
 nav_order: 4
-=======
-nav_order: 3
->>>>>>> 0af4aecf50426fc1e35696ca4c47940737175b26
 display_categories: [work, fun]
 horizontal: false
 ---
