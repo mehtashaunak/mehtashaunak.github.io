@@ -4,12 +4,7 @@ layout: default
 
 <!-- about.html -->
       <div class="post">
-        <header class="post-header">
-          <h1 class="post-title">
-            {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
-          </h1>
-          <p class="desc">{{ page.subtitle }}</p>
-        </header>
+        
 
         <article>
           {% if page.profile -%}
@@ -17,60 +12,91 @@ layout: default
             {%- if page.profile.image %}
               {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
 
-              {% if page.profile.image_circular %}
+              {% if page.profile.image_cicular %}
                 {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
               {% else %}
                 {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
               {% endif %}
 
-              {% include figure.html
-              path=profile_image_path
+              {% include figure.html 
+              path=profile_image_path 
               class=profile_image_class
-              alt=page.profile.image
-              cache_bust=true -%}
+              alt=page.profile.image -%}
             {% endif -%}
-            {%- if page.profile.more_info %}
-            <div class="more-info">
-              {{ page.profile.more_info }}
+            {%- if page.profile.address %}
+            <div class="address">
+              {{ page.profile.address }}
             </div>
             {%- endif %}
           </div>
           {%- endif %}
 
-          <div class="clearfix">
+          <div class="clearfix" style="vertical-align: middle;">
+            <header class="post-header">
+              <h6>Hey There!</h6>
+              <h1 class="post-title">
+               I'm {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
+              </h1>
+              <p class="desc">{{ page.subtitle }}</p>
+            </header>
+            <p>
+              <font style="font-size: 18px;">I am currently a Senior Researcher in the Spatial Robotics Research Center at </font style="font-size: 18px;"> <a href="https://global.fujitsu/en-us/local/technology/research"> <span style="font-size: 18px; color: var(--global-theme-color) ;">Fujitsu Research of America </span>. I recieved my PhD from Department of Mechanical Engineering at Virginia Tech, where I was adviced by </font style="font-size: 18px;"> <a href="https://dylanlosey.com/"> <span style="font-size: 18px; color: var(--global-theme-color) ;">
+                  Dr. Dylan Losey </span> and was a part of the
+                  Collaborative Robotics Lab (Collab).
+              </a>.
+              <font style="font-size: 18px;">During my internship at </font> <a href="https://usa.honda-ri.com/"> <span style="font-size: 18px; color: var(--global-theme-color) ;">
+                  Honda Research Institue </span></a>
+              <font style="font-size: 18px;">, I had the opportunity to work with </font> <a href="https://www.linkedin.com/in/rana-soltani"> <span style="font-size: 18px; color: var(--global-theme-color) ;"> Rana Soltani Zarrin </span></a> 
+              <font style="font-size: 18px;">in the domain of dexterous manipulation with multi-fingered grippers.</font>
+          </p>
+          <!-- <br> -->
+          <p>
+              <font style="font-size: 18px;">I completed my Bachelors in Mechanical Engineering with minor in Robotics and
+                  Mobility Systems at Indian Institute of Technology (IIT) Jodhpur in 2021. During
+                  my Bachelors, I was working under the supervision of </font> <a
+                  href="http://surilshah.weebly.com/"><span style="font-size: 18px; color: var(--global-theme-color) ;">
+                  Dr. Suril V. Shah</span>
+              </a>. <font style="font-size: 18px;">I am grateful that I have had the opportunity to work with </font> <a style="font-size: 18px;"
+                  href="http://www.iitp.ac.in/~athakur/index.html"><span style="color: var(--global-theme-color) ;">
+                  Dr. Atul Thakur</span>
+              </a>
+              <font style="font-size: 18px;">during my internship at Mechatronics, Instrumentation and Control (MICL) Lab
+                  at IIT Patna. </font>
+          </p>
+          <!-- <br> -->
+          <p>
+              <font style="font-size: 18px;"> My research interests include Robot Learning, Dexterous Manipulation and Human-Robot Interaction, and am forever looking for opportunities to expand and apply my knowledge in these ever-evolving fields. </font>
+          </p>
+          <!-- <br> -->
+          <p>
+              <font style="font-size: 18px;"> Besides research, I love painting, travelling, exploring new cultures and meeting new
+                  people.<br></font>
+          </p>
             {{ content }}
           </div>
 
+          {% if page.news -%}
           <!-- News -->
-          {% if page.news and site.announcements.enabled -%}
-            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
-            {%- include news.html limit=true %}
+          {%- include news.html %}
           {%- endif %}
-
-          <!-- Latest posts -->
-          {% if page.latest_posts -%}
-            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
-            {%- include latest_posts.html %}
-          {%- endif %}
-
-          <!-- Selected papers -->
           {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
+            <!-- Selected papers -->
             {%- include selected_papers.html %}
           {%- endif %}
-
-          <!-- Social -->
           {%- if page.social %}
-            <div class="social">
-              <div class="contact-icons">
-                {% include social.html %}
-              </div>
-
-              <div class="contact-note">
-                {{ site.contact_note }}
-              </div>
-
+          <!-- Social -->
+          <div class="social">
+            
+            <div class="contact-icons">
+            {% include social.html %}
             </div>
+            <!-- <a href="assets/Resume/Shaunak_Resume_2022.pdf" class="butn butn-bg mt-20" style="margin: 100px;"><span style="vertical-align: middle;">Resume</span></a> -->
+
+            <div class="contact-note">
+              {{ site.contact_note }}
+            </div>
+            
+          </div>
           {%- endif %}
         </article>
 
